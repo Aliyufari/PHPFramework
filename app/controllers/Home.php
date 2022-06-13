@@ -1,5 +1,5 @@
 <?php 
-	class Home{
+	class Home extends Controller{
 		
 		public function __construct()
 		{
@@ -11,6 +11,6 @@
 		}
 
 		public function about(){
-			echo "About Method";
+			$this->view('home');
 		}
 	}
