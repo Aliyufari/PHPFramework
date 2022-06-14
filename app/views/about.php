@@ -1,1 +1,3 @@
-About from About Page
+<?php 	
+
+echo URLROOT;

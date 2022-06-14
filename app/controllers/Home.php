@@ -11,6 +11,6 @@
 		}
 
 		public function about(){
-			$this->view('home');
+			$this->view('about');
 		}
 	}
