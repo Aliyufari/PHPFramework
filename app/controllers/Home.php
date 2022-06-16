@@ -1,9 +1,8 @@
 <?php 
 	class Home extends Controller{
 		
-		public function __construct()
-		{
-			
+		public function __construct(){
+			$this->userModel = $this->model("User");
 		}
 
 		public function index(){
@@ -11,6 +10,10 @@
 		}
 
 		public function about(){
-			$this->view('about');
+			$users = $this->userModel->getUser();
+			$data = [
+				'users' => $users
+			];
+			$this->view('about', $data);
 		}
 	}

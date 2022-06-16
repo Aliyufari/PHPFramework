@@ -9,9 +9,9 @@
 		private $statement;
 		private $error;
 
-		public function __constuct(){
+		public function __construct(){
 
-			$conn = "mysql:host=".$dbHost.";dbname=".$dbName;
+			$conn = "mysql:host=". $this->dbHost .";dbname=". $this->dbName;
 			$options =[
 				PDO::ATTR_PERSISTENT => true,
 				PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
@@ -27,6 +27,7 @@
 		}
 
 		public function query($sql){
+
 			$this->statement = $this->handler->prepare($sql);
 		}
 
